@@ -1,16 +1,16 @@
 ## Universidade Federal Fluminense
-### Instituto de Computa��o
+### Instituto de Computaçao
 
 
-### Disciplina: PROGRAMA��O ORIENTADA A OBJETOS (TCC00328)
+### Disciplina: PROGRAMAÇAO ORIENTADA A OBJETOS (TCC00328)
 Turma: C1
-Professor: Flavia Bernardini � fcbernardini@ic.uff.br
-Semestre: 2o de 2019 � 6as feiras das 18:00 �s 22:00
+Professor: Flavia Bernardini  fcbernardini@ic.uff.br
+Semestre: 2o de 2019  6as feiras das 18:00 �s 22:00
 
-Trabalho Pr�tico
+Trabalho Pratico
 
-O objetivo do trabalho pr�tico de cada grupo � desenvolver uma parte de um sistema computacional para uma f�brica de bicicletas, sendo que o objetivo do sistema � apoiar a produ��o das bicicletas, garantindo que os recursos necess�rios sejam alocados (pessoas e materiais) a fim de entregar um produto no prazo e com qualidade para o cliente.
-A f�brica possui os seguintes setores de funcionamento:
+O objetivo do trabalho pratico de cada grupo � desenvolver uma parte de um sistema computacional para uma f�brica de bicicletas, sendo que o objetivo do sistema � apoiar a produ��o das bicicletas, garantindo que os recursos necess�rios sejam alocados (pessoas e materiais) a fim de entregar um produto no prazo e com qualidade para o cliente.
+A fabrica possui os seguintes setores de funcionamento:
 o PCP � Planejamento e Controle de Produ��o
 o Financeiro
 o Compras

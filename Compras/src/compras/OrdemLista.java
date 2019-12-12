@@ -52,10 +52,10 @@ public class OrdemLista extends Item {
 
     @Override
     public String toString() {
-        return "OrdemLista{" +
+        return "" +
                 "Id_Compra=" + Id_Compra +
                 ", Valor_Total=" + Valor_Total +
-                ", Quantidade=" + Quantidade +"}";
+                ", Quantidade=" + Quantidade ;
     }
 
 

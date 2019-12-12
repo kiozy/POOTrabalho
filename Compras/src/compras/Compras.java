@@ -13,12 +13,13 @@ import java.util.Scanner;
 
 /**
  *
- * @author natmatzides
+ * @author Nicolas Atmatzides
+ * @author Lucas Vieira
  */
 public class Compras {
     //Compras
 
-    private ArrayList<OrdemLista> ordemListas = new ArrayList<>();
+    private static ArrayList<OrdemLista> ordemListas = new ArrayList<>();
 
     public void ListarCompras(){
         System.out.println("As compras sao:");
@@ -61,21 +62,55 @@ public class Compras {
         ordemListas.add(newOrder);
         System.out.println("\nConfirmado nova ordem de compra:"+ newOrder.toString()+",valor="+ valor+",codigo de barras=" + codigo_de_Barras);
     }
+    public void RemoverCompras(){
+        Scanner keyboard = new Scanner(System.in);
+        Compras listaCompra = new Compras();
+        listaCompra.ListarCompras();
+        System.out.println("\nInsira o ID da compra que quer remover da lista:\n");
+        int i = keyboard.nextInt();
+        ordemListas.remove(i);
+        listaCompra.ListarCompras();
+    }
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("\nSetor de compras:\n");
-        System.out.println("(1) Solicitar novo pedido");
-        System.out.println("(2) Listar compras");
-        System.out.println("(4) Remover item");
-        System.out.println("(5) Sair");
-
+        int choice;
+        boolean loop = true;
         Compras compras = new Compras();
-        compras.NovoPedido();
-        compras.ListarCompras();
+        Scanner keyboard = new Scanner(System.in);
+        while (true){
+            System.out.println("\nSetor de compras:\n");
+
+            System.out.println("(1) Solicitar nova compra");
+            System.out.println("(2) Listar compras");
+            System.out.println("(3) Remover compra");
+            System.out.println("(4) Sair");
+            System.out.println("\nChoose a option:");
+            choice = keyboard.nextInt();
+
+            switch (choice){
+                case 1:
+                    compras.NovoPedido();
+                    break;
+                case 2:
+                    compras.ListarCompras();
+                    break;
+                case 3:
+                    compras.RemoverCompras();
+                    break;
+                case 4:
+                    Runtime.getRuntime().exit(0);
+                    break;
+                default:
+                    System.out.println("Fatal input: Por favor tente novamente:");
+
+            }
+
 
     }
+
+}
 
 }

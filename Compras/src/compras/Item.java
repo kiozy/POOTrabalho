@@ -50,10 +50,9 @@ public class Item {
     }
     @Override
     public String toString() {
-        return "Item{" +
+        return "" +
                 "Codigo_de_Barras=" + Codigo_de_Barras +
                 ", Descricao='" + Descricao + '\'' +
-                ", valor=" + valor +
-                '}';
+                ", valor=" + valor;
     }
 }
