@@ -18,7 +18,9 @@ o Vendas
 o RH - Recursos Humanos
 
 Os seguintes conceitos devem ser considerados para o desenvolvimento desse sistema:
-o Para produção de um produto, há um processo simplificado com três etapas: Pedido, Projeto e Produto:
+
+o Para produção de um produto, há um processo simplificado com três etapas: 
+Pedido, Projeto e Produto:
 
 Na etapa Pedido, o setor de vendas recebe uma encomenda de um cliente, armazena seus dados e a quantidade de bicicletas a serem produzidas. O setor de vendas deve verificar se existem bicicletas daquele modelo prontas para entrega no estoque. Caso existam, o pedido é imediatamente processado e passa para a etapa de entrega. Caso contrário, o setor deve encaminhar a encomenda para o setor de PCP.
 Deve ser feita uma baixa de itens vendidos no sistema, após a venda ser concluída.
