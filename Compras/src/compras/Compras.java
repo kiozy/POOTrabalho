@@ -5,10 +5,8 @@
  */
 package compras;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -22,18 +20,18 @@ public class Compras {
     private static ArrayList<OrdemLista> ordemListas = new ArrayList<>();
 
     public void ListarCompras(){
-        System.out.println("As compras sao:");
         if (ordemListas.size()==0){
-            System.out.println("nao existem compras atualmente");
+            System.out.println("\nNão existem compras atualmente.");
         }
         else
         for(int i =0; i < ordemListas.size(); i++){
-            System.out.println("Compras:"+ordemListas.get(i).toString());
+            System.out.println("\nAs compras sao:\n"+ordemListas.get(i).toString());
         }
     }
 
     public void NovoPedido(){
-        int codigo_de_Barras, valor, idCompra = ordemListas.size(), valortotal, quantidade;
+        int codigo_de_Barras, idCompra = ordemListas.size(), quantidade;
+        double valor, valortotal;
         String descricao;
 
         Scanner keyboard = new Scanner(System.in);
@@ -41,26 +39,24 @@ public class Compras {
         System.out.println("\nAdicione o novo codigo de barras:");
         codigo_de_Barras = keyboard.nextInt();
 
-
-        System.out.println("\nAdicione a descriçao do produto:");
+        System.out.println("\nAdicione o nome do produto:");
         descricao = keyboard.next();
-
-        System.out.println("\nAdicone o valor do produto:");
-        valor = keyboard.nextInt();
 
         System.out.println("\nAdicone a quantidade de produtos a ser comprada:");
         quantidade = keyboard.nextInt();
-
-
-        valortotal = quantidade * valor;
-        System.out.println("\nValor total da compra:"+valortotal);
+        
+        System.out.println("\nAdicone o valor unitário do produto:");
+        valor = keyboard.nextDouble();
 
         idCompra = idCompra++;
         System.out.println("\nNumero de compra gerado:"+idCompra);
+        
+        valortotal = quantidade * valor;
+        System.out.println("\nValor total da compra:"+valortotal);
 
         OrdemLista newOrder = new OrdemLista(codigo_de_Barras,descricao,valor,idCompra,valortotal,quantidade);
         ordemListas.add(newOrder);
-        System.out.println("\nConfirmado nova ordem de compra:"+ newOrder.toString()+",valor="+ valor+",codigo de barras=" + codigo_de_Barras);
+        System.out.println("\nConfirmada nova ordem de compra!"+ newOrder.toString()+",valor="+ valor+",codigo de barras=" + codigo_de_Barras);
     }
     public void RemoverCompras(){
         Scanner keyboard = new Scanner(System.in);
@@ -77,25 +73,23 @@ public class Compras {
      */
     public static void main(String[] args) {
         int choice;
-        boolean loop = true;
         Compras compras = new Compras();
         Scanner keyboard = new Scanner(System.in);
         while (true){
-            System.out.println("\nSetor de compras:\n");
-
-            System.out.println("(1) Solicitar nova compra");
-            System.out.println("(2) Listar compras");
+            System.out.println("\n############ SETOR DE COMPRAS ############");
+            System.out.println("(1) Listar compras");
+            System.out.println("(2) Adicionar nova compra");  
             System.out.println("(3) Remover compra");
             System.out.println("(4) Sair");
-            System.out.println("\nChoose a option:");
+            System.out.print("\nEscolha uma opção: ");
             choice = keyboard.nextInt();
 
             switch (choice){
                 case 1:
-                    compras.NovoPedido();
+                    compras.ListarCompras();
                     break;
                 case 2:
-                    compras.ListarCompras();
+                    compras.NovoPedido();
                     break;
                 case 3:
                     compras.RemoverCompras();
@@ -104,7 +98,7 @@ public class Compras {
                     Runtime.getRuntime().exit(0);
                     break;
                 default:
-                    System.out.println("Fatal input: Por favor tente novamente:");
+                    System.out.println("Erro! Por favor, tente um valor válido.");
 
             }
 

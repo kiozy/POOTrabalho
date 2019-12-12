@@ -12,3 +12,4 @@ target/
 *.bd
 *.trace
 *.bak
+/Compras/build/
