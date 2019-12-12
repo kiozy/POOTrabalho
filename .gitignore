@@ -1,1 +1,14 @@
 /Compras/nbproject/private/
+out/
+classes/
+target/
+.idea/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.iml
+*.bd
+*.trace
+*.bak

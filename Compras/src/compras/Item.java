@@ -9,9 +9,11 @@ package compras;
  *
  * @author natmatzides
  */
-public class ItemLista {
+public class Item {
 
-    
+
+
+
     private int Codigo_de_Barras;
     private String Descricao;
     private int valor;
@@ -40,10 +42,18 @@ public class ItemLista {
         this.valor = valor;
     }
     
-    public ItemLista(int Codigo_de_Barras, String Descricao, int Valor){
+    public Item(int Codigo_de_Barras, String Descricao, int Valor){
         this.Codigo_de_Barras = Codigo_de_Barras;
         this.Descricao = Descricao;
         this.valor = Valor;
         
+    }
+    @Override
+    public String toString() {
+        return "Item{" +
+                "Codigo_de_Barras=" + Codigo_de_Barras +
+                ", Descricao='" + Descricao + '\'' +
+                ", valor=" + valor +
+                '}';
     }
 }
