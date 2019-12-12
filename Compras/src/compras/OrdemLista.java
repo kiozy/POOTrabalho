@@ -5,16 +5,22 @@
  */
 package compras;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author natmatzides
  */
-public class Lista extends ItemLista{
+public class Lista extends Item {
 
-   public Lista(int Codigo_de_Barras,String Descricao,int valor){
-   
-       super(Codigo_de_Barras, Descricao, valor);
-   }
+    public Lista(int Codigo_de_Barras, String Descricao, int Valor, int id_Compra, int valor_Total, int quantidade) {
+        super(Codigo_de_Barras, Descricao, Valor);
+        Id_Compra = id_Compra;
+        Valor_Total = valor_Total;
+        Quantidade = quantidade;
+        
+    }
     private int Id_Compra;
     private int Valor_Total;
     private int Quantidade;
@@ -42,5 +48,6 @@ public class Lista extends ItemLista{
     public void setQuantidade(int Quantidade) {
         this.Quantidade = Quantidade;
     }
-    
+
+
 }
