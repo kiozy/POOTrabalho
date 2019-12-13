@@ -10,11 +10,12 @@ package compras;
  * @author natmatzides
  */
 public class Item {
-
+    //Item possuirá código de barras, descrição e um valor unitário
     private String Codigo_de_Barras;
     private String Descricao;
     private double valor;
     
+    //Getters e setters adicionados para todas as variáveis privates criadas
     public String getCodigo_de_Barras() {
         return Codigo_de_Barras;
     }
@@ -39,6 +40,7 @@ public class Item {
         this.valor = valor;
     }
     
+    //Construtor para Item
     public Item(String Codigo_de_Barras, String Descricao, double Valor){
         this.Codigo_de_Barras = Codigo_de_Barras;
         this.Descricao = Descricao;
