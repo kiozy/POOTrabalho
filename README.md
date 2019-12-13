@@ -1,13 +1,12 @@
 ## Universidade Federal Fluminense
-### Instituto de Computação
 
-
+### Grupo: Lucas Vieira e Nicolas Atmatzides
 ### Disciplina: PROGRAMAÇÃO ORIENTADA A OBJETOS (TCC00328)
 Turma: C1
 Professor: Flavia Bernardini - fcbernardini@ic.uff.br
 Semestre: 2º de 2019 - 6ªs feiras das 18:00 às 22:00
 
-Trabalho Prático
+###Trabalho Prático
 
 O objetivo do trabalho prático de cada grupo é desenvolver uma parte de um sistema computacional para uma fábrica de bicicletas, sendo que o objetivo do sistema é apoiar a produção das bicicletas, garantindo que os recursos necessários sejam alocados (pessoas e materiais) a fim de entregar um produto no prazo e com qualidade para o cliente.
 A fábrica possui os seguintes setores de funcionamento:
