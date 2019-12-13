@@ -11,15 +11,15 @@ package compras;
  */
 public class Item {
 
-    private int Codigo_de_Barras;
+    private String Codigo_de_Barras;
     private String Descricao;
     private double valor;
     
-    public int getCodigo_de_Barras() {
+    public String getCodigo_de_Barras() {
         return Codigo_de_Barras;
     }
 
-    public void setCodigo_de_Barras(int Codigo_de_Barras) {
+    public void setCodigo_de_Barras(String Codigo_de_Barras) {
         this.Codigo_de_Barras = Codigo_de_Barras;
     }
 
@@ -39,7 +39,7 @@ public class Item {
         this.valor = valor;
     }
     
-    public Item(int Codigo_de_Barras, String Descricao, double Valor){
+    public Item(String Codigo_de_Barras, String Descricao, double Valor){
         this.Codigo_de_Barras = Codigo_de_Barras;
         this.Descricao = Descricao;
         this.valor = Valor;

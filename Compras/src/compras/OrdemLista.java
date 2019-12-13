@@ -11,7 +11,7 @@ package compras;
  */
 public class OrdemLista extends Item {
 
-    public OrdemLista(int Codigo_de_Barras, String Descricao, double Valor, int id_Compra, double valor_Total, int quantidade) {
+    public OrdemLista(String Codigo_de_Barras, String Descricao, double Valor, int id_Compra, double valor_Total, int quantidade) {
         super(Codigo_de_Barras, Descricao, Valor);
         Id_Compra = id_Compra;
         Valor_Total = valor_Total;

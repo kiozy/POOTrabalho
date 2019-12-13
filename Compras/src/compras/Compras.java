@@ -31,14 +31,14 @@ public class Compras {
     }
 
     public void NovoPedido(){
-        int codigo_de_Barras, idCompra = ordemListas.size(), quantidade;
+        int idCompra = ordemListas.size(), quantidade;
         double valor, valortotal;
-        String descricao;
+        String codigo_de_Barras, descricao;
 
         Scanner keyboard = new Scanner(System.in);
 
         System.out.print("\nAdicione o novo codigo de barras: ");
-        codigo_de_Barras = keyboard.nextInt();
+        codigo_de_Barras = keyboard.next();
 
         System.out.print("\nAdicione o nome do produto: ");
         descricao = keyboard.next();
