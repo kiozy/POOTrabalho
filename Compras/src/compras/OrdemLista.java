@@ -49,10 +49,13 @@ public class OrdemLista extends Item {
     @Override
     public String toString() {
         return "" +
-                "Id_Compra=" + Id_Compra +
-                ", Valor_Total=" + Valor_Total +
-                ", Quantidade=" + Quantidade ;
+                "\nId da compra: " + Id_Compra +
+                " / código de barras: "+ getCodigo_de_Barras()+
+                " / produto: "+ getDescricao()+
+                " / valor unitário: R$"+ getValor() +
+                " / quantidade: " + Quantidade +
+                " / valor final: R$" + Valor_Total + ".";
+                
     }
-
 
 }

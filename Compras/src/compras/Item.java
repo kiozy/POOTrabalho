@@ -45,11 +45,4 @@ public class Item {
         this.valor = Valor;
         
     }
-    @Override
-    public String toString() {
-        return "" +
-                "Codigo_de_Barras=" + Codigo_de_Barras +
-                ", Descricao='" + Descricao + '\'' +
-                ", valor=" + valor;
-    }
 }
