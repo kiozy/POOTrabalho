@@ -11,8 +11,8 @@ package compras;
  */
 public class OrdemLista extends Item {
     //Extendendo a classe Item para que sejam adicionadas novas variáveis
-    public OrdemLista(String Codigo_de_Barras, String Descricao, double Valor, int id_Compra, double valor_Total, int quantidade) {
-        super(Codigo_de_Barras, Descricao, Valor);  //Todas as variáveis usadas em Item
+    public OrdemLista(String Codigo_de_Barras, String Descricao,String Fornecedor, double Valor, int id_Compra, double valor_Total, int quantidade) {
+        super(Codigo_de_Barras, Descricao, Fornecedor, Valor);  //Todas as variáveis usadas em Item
         //Novas variáveis que vão pertencer somente à OrdemLista
         Id_Compra = id_Compra;
         Valor_Total = valor_Total;
@@ -54,6 +54,7 @@ public class OrdemLista extends Item {
                 "\nId da compra: " + Id_Compra +
                 " / código de barras: "+ getCodigo_de_Barras()+  //Seleciona o getter do código de barras disponibilizado em Item
                 " / produto: "+ getDescricao()+ //Seleciona o getter da descrição disponibilizada em Item
+                " / fornecedor: "+ getFornecedor()+ //Seleciona o getter do fornecedor disponibilizada em Item
                 " / valor unitário: R$"+ getValor() + //Seleciona o getter do valor unitário disponibilizado em Item
                 " / quantidade: " + Quantidade +
                 " / valor final: R$" + Valor_Total + ".";

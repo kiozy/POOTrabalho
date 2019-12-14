@@ -35,7 +35,7 @@ public class Compras {
         //Cada item do pedido vai ser armazenado em um item no ArrayList diferente para que cada um seja enviado para um fornecedor diferente
         int idCompra = ordemListas.size(), quantidade;
         double valor, valortotal;
-        String codigo_de_Barras, descricao;
+        String codigo_de_Barras, descricao, fornecedor;
         //Variáveis declaradas
         
         System.out.print("\nAdicione o novo codigo de barras: ");
@@ -43,6 +43,9 @@ public class Compras {
 
         System.out.print("\nAdicione o nome do produto: ");
         descricao = keyboard.next(); //O nome do produto é armazenado em um variável de string
+        
+        System.out.print("\nAdicione o nome do fornecedor: ");
+        fornecedor = keyboard.next(); //O nome do fornecedor é armazenado em um variável de string
 
         System.out.print("\nAdicone a quantidade de produtos a ser comprada: ");
         quantidade = keyboard.nextInt(); //A quantidade do produto é armazenada em um variável de inteiro
@@ -50,10 +53,10 @@ public class Compras {
         System.out.print("\nAdicone o valor unitário do produto: R$");
         valor = keyboard.nextDouble(); //O valor unitário é armazenado em um variável de double
 
-        idCompra = idCompra++; //idCompra vê quantos itens tem no ArrayList e soma um para adicionar um novo item. Começa do 0
+        idCompra = ++idCompra; //idCompra vê quantos itens tem no ArrayList e soma um para adicionar um novo item. Começa do 1
         valortotal = quantidade * valor; //O valor total é calculado pela multiplicação entre a quantidade de itens com o valor unitário
 
-        OrdemLista newOrder = new OrdemLista(codigo_de_Barras,descricao,valor,idCompra,valortotal,quantidade); //Instanciando uma OrdemLista
+        OrdemLista newOrder = new OrdemLista(codigo_de_Barras,descricao,fornecedor,valor,idCompra,valortotal,quantidade); //Instanciando uma OrdemLista
         ordemListas.add(newOrder); //Armazena o novo pedido, com suas variáveis
         System.out.println("\nConfirmada nova ordem de compra! Confira: "+ newOrder.toString()); //Mensagem de confirmação do novo pedido
     }
@@ -62,7 +65,7 @@ public class Compras {
         listaCompra.ListarCompras();  //Chama a função de listar os itens armazenados para que possa saber qual deseja excluir
         System.out.println("\nInsira o ID da compra que quer remover da lista:");
         int i = keyboard.nextInt();
-        ordemListas.remove(i);  //Remove o item do ArrayList com o ID desejado
+        ordemListas.remove(i-1);  //Remove o item do ArrayList com o ID desejado
         
     }
 

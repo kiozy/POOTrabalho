@@ -13,6 +13,7 @@ public class Item {
     //Item possuirá código de barras, descrição e um valor unitário
     private String Codigo_de_Barras;
     private String Descricao;
+    private String Fornecedor;
     private double valor;
     
     //Getters e setters adicionados para todas as variáveis privates criadas
@@ -32,6 +33,14 @@ public class Item {
         this.Descricao = Descricao;
     }
 
+    public String getFornecedor() {
+        return Fornecedor;
+    }
+
+    public void setFornecedor(String Fornecedor) {
+        this.Fornecedor = Fornecedor;
+    }
+
     public double getValor() {
         return valor;
     }
@@ -41,9 +50,10 @@ public class Item {
     }
     
     //Construtor para Item
-    public Item(String Codigo_de_Barras, String Descricao, double Valor){
+    public Item(String Codigo_de_Barras, String Descricao, String Fornecedor, double Valor){
         this.Codigo_de_Barras = Codigo_de_Barras;
         this.Descricao = Descricao;
+        this.Fornecedor = Fornecedor;
         this.valor = Valor;
         
     }
